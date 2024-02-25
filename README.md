@@ -10,7 +10,12 @@ kubectl apply -f ./
 curl http://arch.homework/health  
 curl http://arch.homework/otusapp/alex/health
 
-Запуск тестов:
+### Запуск тестов
 ```
 newman run ./tests/postmanCollection.json
 ```
+
+### Удаление
+```
+kubectl delete ingress ingress-purchase && kubectl delete service service-purchase && kubectl delete deployment deployment-purchase
+``` 
